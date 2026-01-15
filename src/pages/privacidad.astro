@@ -1,0 +1,130 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import PageHero from '../components/PageHero.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Aviso de Privacidad | Constructora Santa Rosalía">
+  <Header />
+
+  <main>
+    <PageHero
+      title="Aviso de Privacidad"
+      breadcrumb="Aviso de Privacidad"
+    />
+
+    <section class="privacy section">
+      <div class="container">
+        <div class="privacy-content">
+          <p class="intro">
+            <strong>CONSTRUCTORA SANTA ROSALIA S.A. DE C.V.</strong>, con domicilio en Perif. Vicente Lombardo Toledano No. 1411-D Col. Plomeros C.P. 31370, Chihuahua, Chihuahua, México, es responsable del tratamiento de sus datos personales.
+          </p>
+
+          <h3>¿Para qué fines utilizamos sus datos personales?</h3>
+          <p>Los datos personales que recabamos de usted, los utilizaremos para las siguientes finalidades que son necesarias para el servicio que solicita:</p>
+          <ul>
+            <li>Responder a sus solicitudes de información</li>
+            <li>Elaborar cotizaciones de proyectos</li>
+            <li>Contactarlo en relación con los servicios que ofrecemos</li>
+            <li>Dar seguimiento a proyectos y contratos</li>
+            <li>Enviar información relevante sobre nuestros servicios</li>
+          </ul>
+
+          <h3>¿Qué datos personales utilizamos?</h3>
+          <p>Para llevar a cabo las finalidades descritas en el presente aviso de privacidad, utilizaremos los siguientes datos personales:</p>
+          <ul>
+            <li>Nombre completo</li>
+            <li>Correo electrónico</li>
+            <li>Número telefónico</li>
+            <li>Dirección</li>
+            <li>Datos de su empresa (en caso de aplicar)</li>
+          </ul>
+
+          <h3>¿Con quién compartimos su información?</h3>
+          <p>Le informamos que sus datos personales no son compartidos con terceros, ya sean personas físicas o morales, nacionales o extranjeras, distintas a nosotros.</p>
+
+          <h3>¿Cómo puede acceder, rectificar o cancelar sus datos personales?</h3>
+          <p>Usted tiene derecho a conocer qué datos personales tenemos de usted, para qué los utilizamos y las condiciones del uso que les damos (Acceso). Asimismo, es su derecho solicitar la corrección de su información personal en caso de que esté desactualizada, sea inexacta o incompleta (Rectificación); que la eliminemos de nuestros registros o bases de datos cuando considere que la misma no está siendo utilizada adecuadamente (Cancelación); así como oponerse al uso de sus datos personales para fines específicos (Oposición). Estos derechos se conocen como derechos ARCO.</p>
+
+          <p>Para el ejercicio de cualquiera de los derechos ARCO, usted deberá presentar la solicitud respectiva a través del siguiente correo electrónico: <a href="mailto:contacto@constructorasantarosalia.com">contacto@constructorasantarosalia.com</a></p>
+
+          <h3>¿Cómo puede limitar el uso o divulgación de su información personal?</h3>
+          <p>Con objeto de que usted pueda limitar el uso y divulgación de su información personal, le ofrecemos la posibilidad de enviarnos su solicitud por correo electrónico a la dirección: <a href="mailto:contacto@constructorasantarosalia.com">contacto@constructorasantarosalia.com</a></p>
+
+          <h3>Cambios al aviso de privacidad</h3>
+          <p>El presente aviso de privacidad puede sufrir modificaciones, cambios o actualizaciones derivadas de nuevos requerimientos legales; de nuestras propias necesidades por los productos o servicios que ofrecemos; de nuestras prácticas de privacidad; de cambios en nuestro modelo de negocio, o por otras causas.</p>
+
+          <p>Nos comprometemos a mantenerlo informado sobre los cambios que pueda sufrir el presente aviso de privacidad, a través de nuestro sitio web.</p>
+
+          <p class="update-date">Última actualización: Enero 2026</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .privacy {
+    background: var(--white);
+  }
+
+  .privacy-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .intro {
+    font-size: 1.125rem;
+    color: var(--gray-700);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  h3 {
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-900);
+    margin: 2rem 0 1rem;
+  }
+
+  p {
+    color: var(--gray-600);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    margin: 1rem 0 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  li {
+    color: var(--gray-600);
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+  }
+
+  a {
+    color: var(--gold-600);
+    text-decoration: underline;
+  }
+
+  a:hover {
+    color: var(--gold-500);
+  }
+
+  .update-date {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--gray-200);
+    font-size: 0.875rem;
+    color: var(--gray-500);
+    font-style: italic;
+  }
+</style>

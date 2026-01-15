@@ -1,0 +1,188 @@
+---
+const services = [
+  {
+    title: 'Distribuidores Viales',
+    description: 'Diseño y construcción de complejos sistemas viales que optimizan el flujo de tráfico urbano con soluciones innovadoras.',
+    icon: 'highway',
+    image: 'https://www.constructorasantarosalia.com/images/galeria/distribuidores%20viales/G_AccesoNorte.jpg'
+  },
+  {
+    title: 'Carreteras',
+    description: 'Construcción de carreteras con los más altos estándares de calidad, durabilidad y seguridad vial.',
+    icon: 'road',
+    image: 'https://www.constructorasantarosalia.com/images/galeria/carreteras/G_CasasGrandesJuarez.jpg'
+  },
+  {
+    title: 'Puentes',
+    description: 'Ingeniería y construcción de puentes vehiculares y estructuras de conexión con tecnología de vanguardia.',
+    icon: 'bridge',
+    image: 'https://www.constructorasantarosalia.com/images/galeria/puentes/G_LaJunta.jpg'
+  },
+  {
+    title: 'Pasos Superiores',
+    description: 'Construcción de pasos a desnivel superiores para mejorar la movilidad y conectividad urbana.',
+    icon: 'overpass',
+    image: 'https://www.constructorasantarosalia.com/images/galeria/pasos_superiores/G_OrtizMena.jpg'
+  },
+  {
+    title: 'Vialidades Urbanas',
+    description: 'Desarrollo integral de vialidades urbanas con infraestructura moderna y funcional.',
+    icon: 'city',
+    image: 'https://www.constructorasantarosalia.com/images/galeria/vialidades_urbanas/G_MiguelDeLaMadrid.jpg'
+  },
+  {
+    title: 'Edificaciones',
+    description: 'Construcción de edificaciones comerciales e industriales cumpliendo los más altos estándares.',
+    icon: 'building',
+    image: 'https://www.constructorasantarosalia.com/images/galeria/edificaciones/G_Cenaltec.jpg'
+  }
+];
+---
+
+<section class="services section">
+  <div class="container">
+    <div class="section-header" data-animate="fade-in-up">
+      <span class="section-label">Nuestros Servicios</span>
+      <h2 class="section-title">Soluciones Integrales en Construcción</h2>
+      <div class="gold-line"></div>
+      <p class="section-description">
+        Ofrecemos una amplia gama de servicios de construcción e infraestructura,
+        respaldados por más de 30 años de experiencia y un equipo altamente capacitado.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      {services.map((service, index) => (
+        <article class="service-card" data-animate="fade-in-up" style={`animation-delay: ${index * 100}ms`}>
+          <div class="service-image">
+            <img src={service.image} alt={service.title} loading="lazy" />
+            <div class="service-overlay"></div>
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">{service.title}</h3>
+            <p class="service-description">{service.description}</p>
+            <a href="/servicios" class="service-link">
+              Más información
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <div class="services-cta" data-animate="fade-in-up">
+      <a href="/servicios" class="btn btn-dark">Ver Todos los Servicios</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .services {
+    background: var(--gray-50);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .service-card {
+    background: var(--white);
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-smooth);
+  }
+
+  .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .service-image {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+  }
+
+  .service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+  }
+
+  .service-card:hover .service-image img {
+    transform: scale(1.1);
+  }
+
+  .service-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(10, 22, 40, 0.7), transparent);
+  }
+
+  .service-content {
+    padding: 2rem;
+  }
+
+  .service-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary-900);
+    margin-bottom: 0.75rem;
+  }
+
+  .service-description {
+    font-size: 0.9375rem;
+    color: var(--gray-500);
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+
+  .service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--gold-600);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: gap var(--transition-base);
+  }
+
+  .service-link:hover {
+    gap: 0.75rem;
+    color: var(--gold-500);
+  }
+
+  .service-link svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .services-cta {
+    text-align: center;
+  }
+
+  @media (max-width: 1024px) {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .service-image {
+      height: 200px;
+    }
+  }
+</style>

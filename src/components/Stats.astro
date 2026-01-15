@@ -1,0 +1,127 @@
+---
+const stats = [
+  { value: '30+', label: 'Años de Experiencia', description: 'Construyendo el futuro de Chihuahua' },
+  { value: '500+', label: 'Proyectos Completados', description: 'En toda la región norte de México' },
+  { value: '200+', label: 'Kilómetros de Carreteras', description: 'Conectando comunidades' },
+  { value: '50+', label: 'Puentes Construidos', description: 'Infraestructura de clase mundial' },
+];
+---
+
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      {stats.map((stat, index) => (
+        <div class="stat-item" data-animate="fade-in-up" style={`animation-delay: ${index * 100}ms`}>
+          <span class="stat-value">{stat.value}</span>
+          <span class="stat-label">{stat.label}</span>
+          <span class="stat-description">{stat.description}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .stats {
+    background: var(--primary-900);
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .stats::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-500), transparent);
+  }
+
+  .stats::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-500), transparent);
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 2rem 1rem;
+    position: relative;
+  }
+
+  .stat-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 60%;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .stat-value {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    color: var(--gold-400);
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .stat-description {
+    font-size: 0.875rem;
+    color: var(--gray-400);
+  }
+
+  @media (max-width: 1024px) {
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat-item:nth-child(2)::after {
+      display: none;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .stat-item::after {
+      display: none !important;
+    }
+
+    .stat-item {
+      padding: 1.5rem 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .stat-item:last-child {
+      border-bottom: none;
+    }
+  }
+</style>

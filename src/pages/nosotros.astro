@@ -1,0 +1,482 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import PageHero from '../components/PageHero.astro';
+import Stats from '../components/Stats.astro';
+import Cta from '../components/Cta.astro';
+import Footer from '../components/Footer.astro';
+
+const values = [
+  {
+    title: 'Compromiso',
+    description: 'Nos comprometemos con cada proyecto desde el inicio hasta su finalización, garantizando el cumplimiento de plazos y especificaciones acordadas.',
+    icon: 'check'
+  },
+  {
+    title: 'Calidad',
+    description: 'Implementamos rigurosos controles de calidad en cada etapa de construcción, utilizando materiales y técnicas que superan los estándares de la industria.',
+    icon: 'star'
+  },
+  {
+    title: 'Innovación',
+    description: 'Adoptamos las últimas tecnologías y metodologías de construcción para ofrecer soluciones más eficientes y sostenibles.',
+    icon: 'lightbulb'
+  },
+  {
+    title: 'Seguridad',
+    description: 'La seguridad de nuestro equipo y comunidades es nuestra prioridad. Cumplimos estrictamente con todas las normas de seguridad.',
+    icon: 'shield'
+  }
+];
+
+const timeline = [
+  { year: '1993', title: 'Fundación', description: 'Inicio de operaciones en Chihuahua, México' },
+  { year: '2000', title: 'Expansión Regional', description: 'Consolidación como líder en infraestructura vial' },
+  { year: '2010', title: 'Crecimiento Sostenido', description: 'Más de 200 proyectos completados' },
+  { year: '2020', title: 'Innovación Tecnológica', description: 'Adopción de tecnologías de vanguardia' },
+  { year: '2026', title: 'Presente', description: 'Líderes en construcción de infraestructura' }
+];
+---
+
+<Layout title="Nosotros | Constructora Santa Rosalía">
+  <Header />
+
+  <main>
+    <PageHero
+      title="Nosotros"
+      breadcrumb="Nosotros"
+      image="https://www.constructorasantarosalia.com/images/about/bg3.jpg"
+    />
+
+    <!-- About Section -->
+    <section class="about-detail section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-images" data-animate="slide-in-left">
+            <div class="image-main">
+              <img
+                src="https://www.constructorasantarosalia.com/images/about/bg3.jpg"
+                alt="Equipo de construcción"
+                loading="lazy"
+              />
+            </div>
+            <div class="image-badge">
+              <span class="badge-number">30+</span>
+              <span class="badge-text">Años de<br>Experiencia</span>
+            </div>
+          </div>
+
+          <div class="about-content" data-animate="slide-in-right">
+            <span class="section-label">¿Quiénes Somos?</span>
+            <h2 class="section-title">Una Empresa Orgullosamente Chihuahuense</h2>
+            <div class="gold-line" style="margin: 1.5rem 0; margin-left: 0;"></div>
+
+            <p class="about-lead">
+              Constructora Santa Rosalía se ha convertido en una de las empresas más sólidas
+              y reconocidas en el ramo gracias a la seriedad, calidad y compromiso que nos caracterizan.
+            </p>
+
+            <p class="about-text">
+              Somos una empresa orgullosamente Chihuahuense con más de 30 años de experiencia.
+              Contamos con el personal mejor capacitado del ramo así como la mejor tecnología
+              para brindar soluciones integrales para nuestros clientes, siempre cumpliendo
+              con los más altos estándares en el mercado.
+            </p>
+
+            <p class="about-text">
+              Los pilares fundamentales de CSR son el compromiso, la calidad y la innovación,
+              garantizando con estos nuestra permanencia sólida en el mercado, gracias a nuestra
+              capacidad de adaptarnos al entorno financiero, social y ambiental de nuestro país.
+            </p>
+
+            <div class="about-video">
+              <a
+                href="https://www.youtube.com/embed/N5PWaCM1pfs?autoplay=1"
+                class="video-link"
+                target="_blank"
+                rel="noopener"
+              >
+                <span class="play-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <polygon points="5 3 19 12 5 21 5 3"/>
+                  </svg>
+                </span>
+                Ver Video Institucional
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values section bg-light">
+      <div class="container">
+        <div class="section-header" data-animate="fade-in-up">
+          <span class="section-label">Nuestros Valores</span>
+          <h2 class="section-title">Lo Que Nos Define</h2>
+          <div class="gold-line"></div>
+        </div>
+
+        <div class="values-grid">
+          {values.map((value, index) => (
+            <div class="value-card" data-animate="fade-in-up" style={`animation-delay: ${index * 100}ms`}>
+              <div class="value-icon">
+                {value.icon === 'check' && (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                  </svg>
+                )}
+                {value.icon === 'star' && (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                  </svg>
+                )}
+                {value.icon === 'lightbulb' && (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z"/>
+                  </svg>
+                )}
+                {value.icon === 'shield' && (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  </svg>
+                )}
+              </div>
+              <h3 class="value-title">{value.title}</h3>
+              <p class="value-description">{value.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <Stats />
+
+    <!-- Timeline Section -->
+    <section class="timeline section">
+      <div class="container">
+        <div class="section-header" data-animate="fade-in-up">
+          <span class="section-label">Nuestra Historia</span>
+          <h2 class="section-title">Trayectoria de Éxito</h2>
+          <div class="gold-line"></div>
+        </div>
+
+        <div class="timeline-track">
+          {timeline.map((item, index) => (
+            <div
+              class={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}
+              data-animate="fade-in-up"
+              style={`animation-delay: ${index * 150}ms`}
+            >
+              <div class="timeline-content">
+                <span class="timeline-year">{item.year}</span>
+                <h4 class="timeline-title">{item.title}</h4>
+                <p class="timeline-description">{item.description}</p>
+              </div>
+              <div class="timeline-dot"></div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <Cta />
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* About Detail Section */
+  .about-detail {
+    background: var(--white);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .about-images {
+    position: relative;
+  }
+
+  .image-main img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    box-shadow: var(--shadow-xl);
+  }
+
+  .image-badge {
+    position: absolute;
+    bottom: -2rem;
+    right: -2rem;
+    background: var(--gold-500);
+    color: var(--primary-900);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow-xl);
+  }
+
+  .badge-number {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .badge-text {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 0.5rem;
+  }
+
+  .about-content .section-label,
+  .about-content .section-title {
+    text-align: left;
+  }
+
+  .about-lead {
+    font-size: 1.125rem;
+    color: var(--gray-700);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-text {
+    color: var(--gray-500);
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+  }
+
+  .about-video {
+    margin-top: 2rem;
+  }
+
+  .video-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+    color: var(--primary-900);
+    transition: color var(--transition-fast);
+  }
+
+  .video-link:hover {
+    color: var(--gold-600);
+  }
+
+  .play-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: var(--gold-500);
+    color: var(--primary-900);
+    border-radius: 50%;
+    transition: transform var(--transition-base);
+  }
+
+  .video-link:hover .play-icon {
+    transform: scale(1.1);
+  }
+
+  .play-icon svg {
+    width: 20px;
+    height: 20px;
+    margin-left: 4px;
+  }
+
+  /* Values Section */
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .value-card {
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-smooth);
+  }
+
+  .value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .value-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 1.5rem;
+    background: var(--gold-500);
+    color: var(--primary-900);
+  }
+
+  .value-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .value-title {
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--primary-900);
+    margin-bottom: 1rem;
+  }
+
+  .value-description {
+    font-size: 0.9375rem;
+    color: var(--gray-500);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* Timeline Section */
+  .timeline {
+    background: var(--white);
+  }
+
+  .timeline-track {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  .timeline-track::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--gold-500);
+    transform: translateX(-50%);
+  }
+
+  .timeline-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+
+  .timeline-item.left {
+    justify-content: flex-start;
+    padding-right: calc(50% + 2rem);
+  }
+
+  .timeline-item.right {
+    justify-content: flex-end;
+    padding-left: calc(50% + 2rem);
+  }
+
+  .timeline-content {
+    background: var(--gray-50);
+    padding: 2rem;
+    max-width: 350px;
+  }
+
+  .timeline-year {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--gold-500);
+    margin-bottom: 0.5rem;
+  }
+
+  .timeline-title {
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--primary-900);
+    margin-bottom: 0.5rem;
+  }
+
+  .timeline-description {
+    font-size: 0.9375rem;
+    color: var(--gray-500);
+    margin: 0;
+  }
+
+  .timeline-dot {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    background: var(--gold-500);
+    border: 4px solid var(--white);
+    box-shadow: var(--shadow-md);
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  @media (max-width: 1024px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .about-images {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .values-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .timeline-track::before {
+      left: 1.5rem;
+    }
+
+    .timeline-item.left,
+    .timeline-item.right {
+      justify-content: flex-start;
+      padding-left: 4rem;
+      padding-right: 0;
+    }
+
+    .timeline-dot {
+      left: 1.5rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .image-badge {
+      right: 0;
+      bottom: -1.5rem;
+      padding: 1.5rem;
+    }
+
+    .badge-number {
+      font-size: 2.5rem;
+    }
+
+    .values-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

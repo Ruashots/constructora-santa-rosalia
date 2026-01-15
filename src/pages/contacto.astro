@@ -1,0 +1,410 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import PageHero from '../components/PageHero.astro';
+import Footer from '../components/Footer.astro';
+
+const contactInfo = [
+  {
+    icon: 'phone',
+    title: 'Teléfonos',
+    lines: ['(614) 436-0515', '(614) 436-0797']
+  },
+  {
+    icon: 'email',
+    title: 'Correo Electrónico',
+    lines: ['contacto@constructorasantarosalia.com', 'csrosalia@prodigy.net.mx']
+  },
+  {
+    icon: 'location',
+    title: 'Dirección',
+    lines: ['Perif. Vicente Lombardo Toledano No. 1411-D', 'Col. Plomeros C.P. 31370', 'Chihuahua, CHIH']
+  },
+  {
+    icon: 'clock',
+    title: 'Horario de Atención',
+    lines: ['Lunes a Viernes', '9:00 AM - 5:00 PM']
+  }
+];
+---
+
+<Layout title="Contacto | Constructora Santa Rosalía">
+  <Header />
+
+  <main>
+    <PageHero
+      title="Contacto"
+      breadcrumb="Contacto"
+      image="https://www.constructorasantarosalia.com/images/about/bg3.jpg"
+    />
+
+    <!-- Contact Section -->
+    <section class="contact section">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Contact Form -->
+          <div class="contact-form-wrapper" data-animate="slide-in-left">
+            <div class="form-header">
+              <span class="section-label">Envíenos un Mensaje</span>
+              <h2>Queremos Saber de Usted</h2>
+              <p>Si tiene alguna duda sobre nuestros servicios por favor llene este formato. Una vez enviado, una persona lo contactará directamente.</p>
+            </div>
+
+            <form class="contact-form" id="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Nombre Completo *</label>
+                  <input type="text" id="name" name="name" required placeholder="Su nombre">
+                </div>
+                <div class="form-group">
+                  <label for="email">Correo Electrónico *</label>
+                  <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone">Teléfono</label>
+                  <input type="tel" id="phone" name="phone" placeholder="(614) 000-0000">
+                </div>
+                <div class="form-group">
+                  <label for="subject">Asunto *</label>
+                  <input type="text" id="subject" name="subject" required placeholder="¿Cómo podemos ayudarle?">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="service">Servicio de Interés</label>
+                <select id="service" name="service">
+                  <option value="">Seleccione un servicio</option>
+                  <option value="distribuidores">Distribuidores Viales</option>
+                  <option value="carreteras">Carreteras</option>
+                  <option value="puentes">Puentes</option>
+                  <option value="pasos-superiores">Pasos Superiores</option>
+                  <option value="vialidades">Vialidades Urbanas</option>
+                  <option value="edificaciones">Edificaciones</option>
+                  <option value="urbanizacion">Urbanización</option>
+                  <option value="canalizaciones">Canalizaciones</option>
+                  <option value="otro">Otro</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Mensaje *</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Cuéntenos más sobre su proyecto..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-submit">
+                <span>Enviar Mensaje</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"/>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                </svg>
+              </button>
+            </form>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="contact-info-wrapper" data-animate="slide-in-right">
+            <div class="contact-info-cards">
+              {contactInfo.map(info => (
+                <div class="info-card">
+                  <div class="info-icon">
+                    {info.icon === 'phone' && (
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                      </svg>
+                    )}
+                    {info.icon === 'email' && (
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                      </svg>
+                    )}
+                    {info.icon === 'location' && (
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                      </svg>
+                    )}
+                    {info.icon === 'clock' && (
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="12 6 12 12 16 14"/>
+                      </svg>
+                    )}
+                  </div>
+                  <div class="info-content">
+                    <h4>{info.title}</h4>
+                    {info.lines.map(line => <p>{line}</p>)}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <!-- Map -->
+            <div class="map-wrapper">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.0!2d-106.052729!3d28.654598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM5JzE2LjYiTiAxMDbCsDAzJzA5LjgiVw!5e0!3m2!1ses!2smx!4v1234567890"
+                width="100%"
+                height="300"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Ubicación de Constructora Santa Rosalía"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .contact {
+    background: var(--gray-50);
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  /* Form Wrapper */
+  .contact-form-wrapper {
+    background: var(--white);
+    padding: 3rem;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .form-header {
+    margin-bottom: 2rem;
+  }
+
+  .form-header .section-label {
+    text-align: left;
+    display: block;
+  }
+
+  .form-header h2 {
+    font-size: 1.75rem;
+    color: var(--primary-900);
+    margin-bottom: 1rem;
+  }
+
+  .form-header p {
+    color: var(--gray-500);
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* Form Styles */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-group label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--gray-700);
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 1rem 1.25rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--gray-700);
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    transition: all var(--transition-fast);
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--gold-500);
+    background: var(--white);
+    box-shadow: 0 0 0 3px rgba(201, 169, 98, 0.1);
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: var(--gray-400);
+  }
+
+  .form-group select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.25rem;
+    padding-right: 3rem;
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .btn-submit {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: fit-content;
+  }
+
+  .btn-submit svg {
+    width: 18px;
+    height: 18px;
+    transition: transform var(--transition-base);
+  }
+
+  .btn-submit:hover svg {
+    transform: translateX(4px);
+  }
+
+  /* Contact Info */
+  .contact-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contact-info-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .info-card {
+    display: flex;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+  }
+
+  .info-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateX(4px);
+  }
+
+  .info-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    background: var(--gold-500);
+    color: var(--primary-900);
+  }
+
+  .info-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .info-content h4 {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-900);
+    margin-bottom: 0.375rem;
+  }
+
+  .info-content p {
+    font-size: 0.9375rem;
+    color: var(--gray-500);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* Map */
+  .map-wrapper {
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+  }
+
+  .map-wrapper iframe {
+    display: block;
+  }
+
+  @media (max-width: 1024px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .contact-info-wrapper {
+      order: -1;
+    }
+
+    .contact-info-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .contact-form-wrapper {
+      padding: 2rem 1.5rem;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-info-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  // Simple form handling
+  const form = document.getElementById('contact-form');
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // Get form data
+    const formData = new FormData(form as HTMLFormElement);
+    const data = Object.fromEntries(formData);
+
+    // Here you would typically send the data to a server
+    console.log('Form submitted:', data);
+
+    // Show success message
+    alert('¡Gracias por su mensaje! Nos pondremos en contacto con usted pronto.');
+
+    // Reset form
+    (form as HTMLFormElement).reset();
+  });
+</script>

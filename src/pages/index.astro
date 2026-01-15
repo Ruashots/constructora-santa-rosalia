@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Stats from '../components/Stats.astro';
+import About from '../components/About.astro';
+import Services from '../components/Services.astro';
+import FeaturedProjects from '../components/FeaturedProjects.astro';
+import Cta from '../components/Cta.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="CSR | Constructora Santa Rosalía - Construyendo el Futuro de Chihuahua">
+  <Header />
+
+  <main>
+    <Hero
+      title="Construyendo el Futuro de Chihuahua"
+      subtitle="Más de 30 Años de Excelencia"
+      description="Soluciones integrales en infraestructura vial, puentes, carreteras y edificaciones. Compromiso, calidad e innovación en cada proyecto."
+      image="https://www.constructorasantarosalia.com/images/slides/main-slider1-1.jpg"
+      showCta={true}
+      height="full"
+    />
+
+    <Stats />
+
+    <About />
+
+    <Services />
+
+    <FeaturedProjects />
+
+    <Cta />
+  </main>
+
+  <Footer />
+</Layout>

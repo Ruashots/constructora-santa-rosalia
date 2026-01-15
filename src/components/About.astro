@@ -1,0 +1,282 @@
+---
+
+---
+
+<section class="about section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-images" data-animate="slide-in-left">
+        <div class="image-main">
+          <img
+            src="https://www.constructorasantarosalia.com/images/about/bg3.jpg"
+            alt="Equipo de Constructora Santa Rosalía"
+            loading="lazy"
+          />
+        </div>
+        <div class="image-secondary">
+          <img
+            src="https://www.constructorasantarosalia.com/images/galeria/distribuidores%20viales/G_AccesoNorte.jpg"
+            alt="Proyecto de infraestructura"
+            loading="lazy"
+          />
+        </div>
+        <div class="experience-badge">
+          <span class="badge-number">30+</span>
+          <span class="badge-text">Años de<br>Experiencia</span>
+        </div>
+      </div>
+
+      <div class="about-content" data-animate="slide-in-right">
+        <span class="section-label">Sobre Nosotros</span>
+        <h2 class="section-title">Construyendo el Futuro de Chihuahua</h2>
+        <div class="gold-line" style="margin: 1.5rem 0;"></div>
+
+        <p class="about-lead">
+          Constructora Santa Rosalía se ha convertido en una de las empresas más sólidas
+          y reconocidas en el ramo gracias a la seriedad, calidad y compromiso que nos caracterizan.
+        </p>
+
+        <p class="about-text">
+          Somos una empresa orgullosamente Chihuahuense con más de 30 años de experiencia.
+          Contamos con el personal mejor capacitado del ramo así como la mejor tecnología
+          para brindar soluciones integrales para nuestros clientes, siempre cumpliendo
+          con los más altos estándares en el mercado.
+        </p>
+
+        <div class="about-values">
+          <div class="value-item">
+            <div class="value-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+            </div>
+            <div class="value-content">
+              <h4>Compromiso</h4>
+              <p>Cumplimos con cada proyecto en tiempo y forma</p>
+            </div>
+          </div>
+
+          <div class="value-item">
+            <div class="value-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+            <div class="value-content">
+              <h4>Calidad</h4>
+              <p>Los más altos estándares en cada obra</p>
+            </div>
+          </div>
+
+          <div class="value-item">
+            <div class="value-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="8" x2="12" y2="12"/>
+                <line x1="12" y1="16" x2="12.01" y2="16"/>
+              </svg>
+            </div>
+            <div class="value-content">
+              <h4>Innovación</h4>
+              <p>Tecnología de vanguardia en construcción</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="/nosotros" class="btn btn-primary">Conocer Más</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    background: var(--white);
+    overflow: hidden;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .about-images {
+    position: relative;
+    padding: 2rem;
+  }
+
+  .image-main {
+    position: relative;
+    z-index: 1;
+  }
+
+  .image-main img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    box-shadow: var(--shadow-xl);
+  }
+
+  .image-secondary {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60%;
+    z-index: 2;
+  }
+
+  .image-secondary img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    box-shadow: var(--shadow-xl);
+    border: 6px solid var(--white);
+  }
+
+  .experience-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--gold-500);
+    color: var(--primary-900);
+    padding: 1.5rem 2rem;
+    z-index: 3;
+    text-align: center;
+  }
+
+  .badge-number {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .badge-text {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 0.25rem;
+  }
+
+  .about-content {
+    padding-right: 2rem;
+  }
+
+  .about-content .section-label {
+    text-align: left;
+    display: block;
+  }
+
+  .about-content .section-title {
+    text-align: left;
+    margin-bottom: 0;
+  }
+
+  .about-content .gold-line {
+    margin-left: 0 !important;
+  }
+
+  .about-lead {
+    font-size: 1.125rem;
+    color: var(--gray-700);
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+  }
+
+  .about-text {
+    color: var(--gray-500);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  .about-values {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .value-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .value-icon {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--gold-500);
+    color: var(--primary-900);
+  }
+
+  .value-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .value-content h4 {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-900);
+    margin-bottom: 0.25rem;
+  }
+
+  .value-content p {
+    font-size: 0.875rem;
+    color: var(--gray-500);
+    margin: 0;
+  }
+
+  @media (max-width: 1024px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .about-images {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .about-content {
+      padding-right: 0;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .about-images {
+      padding: 1rem;
+    }
+
+    .image-main img {
+      height: 350px;
+    }
+
+    .image-secondary {
+      width: 70%;
+    }
+
+    .image-secondary img {
+      height: 180px;
+    }
+
+    .experience-badge {
+      padding: 1rem 1.5rem;
+    }
+
+    .badge-number {
+      font-size: 2rem;
+    }
+  }
+</style>

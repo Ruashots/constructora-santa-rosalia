@@ -1,0 +1,316 @@
+{
+  "categories": [
+    { "id": "all", "name": "Todos" },
+    { "id": "distribuidores", "name": "Distribuidores Viales" },
+    { "id": "carreteras", "name": "Carreteras" },
+    { "id": "puentes", "name": "Puentes" },
+    { "id": "pasos-superiores", "name": "Pasos Superiores" },
+    { "id": "pasos-inferiores", "name": "Pasos Inferiores" },
+    { "id": "vialidades", "name": "Vialidades Urbanas" },
+    { "id": "edificaciones", "name": "Edificaciones" },
+    { "id": "urbanizacion", "name": "Urbanización" },
+    { "id": "canalizaciones", "name": "Canalizaciones" }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Acceso Norte",
+      "category": "distribuidores",
+      "location": "Chihuahua",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/distribuidores%20viales/G_AccesoNorte.jpg",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Eje 60 y Eje 0",
+      "category": "distribuidores",
+      "location": "Chihuahua",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/distribuidores%20viales/G_Eje60yEje0.jpg",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "Camargo - Boquilla",
+      "category": "carreteras",
+      "location": "Chihuahua",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/carreteras/G_Camargo_Boquilla.jpg",
+      "featured": false
+    },
+    {
+      "id": 4,
+      "title": "Casas Grandes",
+      "category": "carreteras",
+      "location": "Chihuahua",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/carreteras/G_CasasGrandesJuarez.jpg",
+      "featured": true
+    },
+    {
+      "id": 5,
+      "title": "Flores Magón",
+      "category": "carreteras",
+      "location": "Chihuahua",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/carreteras/G_FloresMagon.jpg",
+      "featured": false
+    },
+    {
+      "id": 6,
+      "title": "Guerrero - Madera",
+      "category": "carreteras",
+      "location": "Chihuahua",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/carreteras/G_GuerreroMadera.jpg",
+      "featured": false
+    },
+    {
+      "id": 7,
+      "title": "Manuel Benavides",
+      "category": "carreteras",
+      "location": "Chihuahua",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/carreteras/G_ManuelBenavides.jpg",
+      "featured": false
+    },
+    {
+      "id": 8,
+      "title": "Ojinaga - El Porvenir",
+      "category": "carreteras",
+      "location": "Chihuahua",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/carreteras/G_OjinagaPorvenir.jpg",
+      "featured": false
+    },
+    {
+      "id": 9,
+      "title": "Rubio - La Quemada",
+      "category": "carreteras",
+      "location": "Chihuahua",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/carreteras/G_RubioLaQuemada.jpg",
+      "featured": false
+    },
+    {
+      "id": 10,
+      "title": "Puente Cantera",
+      "category": "pasos-superiores",
+      "location": "Chihuahua",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/pasos_superiores/G_Cantera.jpg",
+      "featured": true
+    },
+    {
+      "id": 11,
+      "title": "Puente Electrolux",
+      "category": "pasos-superiores",
+      "location": "Chihuahua",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/pasos_superiores/G_Electrolux.jpg",
+      "featured": false
+    },
+    {
+      "id": 12,
+      "title": "Puente Francisco Villa",
+      "category": "pasos-superiores",
+      "location": "Chihuahua",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/pasos_superiores/G_FranciscoVilla.jpg",
+      "featured": true
+    },
+    {
+      "id": 13,
+      "title": "Puente Homero",
+      "category": "pasos-superiores",
+      "location": "Chihuahua",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/pasos_superiores/G_Homero.jpg",
+      "featured": false
+    },
+    {
+      "id": 14,
+      "title": "Puente María Luisa",
+      "category": "pasos-superiores",
+      "location": "Chihuahua",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/pasos_superiores/G_MariaLuisa.jpg",
+      "featured": false
+    },
+    {
+      "id": 15,
+      "title": "Puente Ortiz Mena",
+      "category": "pasos-superiores",
+      "location": "Chihuahua",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/pasos_superiores/G_OrtizMena.jpg",
+      "featured": true
+    },
+    {
+      "id": 16,
+      "title": "Paso Inferior Ignacio Rodríguez",
+      "category": "pasos-inferiores",
+      "location": "Chihuahua",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/pasos_inferiores/G_IgnacioRodriguez.jpg",
+      "featured": false
+    },
+    {
+      "id": 17,
+      "title": "Paso Inferior Juan Escutia",
+      "category": "pasos-inferiores",
+      "location": "Chihuahua",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/pasos_inferiores/G_JuanEscutia.jpg",
+      "featured": false
+    },
+    {
+      "id": 18,
+      "title": "Puente Cajones Manuel Benavides",
+      "category": "puentes",
+      "location": "Chihuahua",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/puentes/G_CajonesManuelBenavides.jpg",
+      "featured": false
+    },
+    {
+      "id": 19,
+      "title": "Puente La Junta",
+      "category": "puentes",
+      "location": "Chihuahua",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/puentes/G_LaJunta.jpg",
+      "featured": true
+    },
+    {
+      "id": 20,
+      "title": "Puente Sabalaza",
+      "category": "puentes",
+      "location": "Chihuahua",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/puentes/G_Sabalaza.jpg",
+      "featured": false
+    },
+    {
+      "id": 21,
+      "title": "Vialidad Cantera",
+      "category": "vialidades",
+      "location": "Chihuahua",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/vialidades_urbanas/G_Cantera.jpg",
+      "featured": false
+    },
+    {
+      "id": 22,
+      "title": "Vialidad Francisco Almada",
+      "category": "vialidades",
+      "location": "Chihuahua",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/vialidades_urbanas/G_FranciscoAlmada.jpg",
+      "featured": false
+    },
+    {
+      "id": 23,
+      "title": "Vialidad Miguel de la Madrid",
+      "category": "vialidades",
+      "location": "Chihuahua",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/vialidades_urbanas/G_MiguelDeLaMadrid.jpg",
+      "featured": true
+    },
+    {
+      "id": 24,
+      "title": "Vialidad Teófilo Burunda",
+      "category": "vialidades",
+      "location": "Chihuahua",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/vialidades_urbanas/G_TeofiloBurunda.jpg",
+      "featured": false
+    },
+    {
+      "id": 25,
+      "title": "CEDIS Myers",
+      "category": "edificaciones",
+      "location": "Chihuahua",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/edificaciones/G_CedisMyers.jpg",
+      "featured": false
+    },
+    {
+      "id": 26,
+      "title": "Cenaltec",
+      "category": "edificaciones",
+      "location": "Chihuahua",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/edificaciones/G_Cenaltec.jpg",
+      "featured": true
+    },
+    {
+      "id": 27,
+      "title": "Mercado de Abastos",
+      "category": "edificaciones",
+      "location": "Chihuahua",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/edificaciones/G_MercadoDeAbastos.jpg",
+      "featured": false
+    },
+    {
+      "id": 28,
+      "title": "Polyforo Ojinaga",
+      "category": "edificaciones",
+      "location": "Ojinaga",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/edificaciones/G_PolyforoOjinaga.jpg",
+      "featured": false
+    },
+    {
+      "id": 29,
+      "title": "Misión del Valle",
+      "category": "urbanizacion",
+      "location": "Chihuahua",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/urbanizacion/G_MisionDelValle.jpg",
+      "featured": false
+    },
+    {
+      "id": 30,
+      "title": "Villa San Pedro",
+      "category": "urbanizacion",
+      "location": "Cd. Meoqui",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/urbanizacion/G_VillaSanPedro.jpg",
+      "featured": false
+    },
+    {
+      "id": 31,
+      "title": "Canalización Cantera",
+      "category": "canalizaciones",
+      "location": "Chihuahua",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/canalizaciones/G_Cantera.jpg",
+      "featured": false
+    },
+    {
+      "id": 32,
+      "title": "Canalización El Picacho",
+      "category": "canalizaciones",
+      "location": "Chihuahua",
+      "image": "https://www.constructorasantarosalia.com/images/galeria/canalizaciones/G_ElPicacho.jpg",
+      "featured": false
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "title": "Distribuidores Viales",
+      "description": "Diseño y construcción de complejos sistemas viales que optimizan el flujo de tráfico urbano.",
+      "icon": "highway",
+      "image": "https://www.constructorasantarosalia.com/images/servicios/servicio-distribuidor.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Carreteras",
+      "description": "Construcción de carreteras con los más altos estándares de calidad y seguridad.",
+      "icon": "road",
+      "image": "https://www.constructorasantarosalia.com/images/servicios/servicio-carretera.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Puentes",
+      "description": "Ingeniería y construcción de puentes vehiculares y estructuras de conexión.",
+      "icon": "bridge",
+      "image": "https://www.constructorasantarosalia.com/images/servicios/servicio-puente.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Pasos Superiores",
+      "description": "Construcción de pasos a desnivel superiores para mejorar la movilidad urbana.",
+      "icon": "overpass",
+      "image": "https://www.constructorasantarosalia.com/images/servicios/servicio-paso-superior.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Vialidades Urbanas",
+      "description": "Desarrollo integral de vialidades urbanas con infraestructura moderna.",
+      "icon": "city",
+      "image": "https://www.constructorasantarosalia.com/images/servicios/servicio-vialidad.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Edificaciones",
+      "description": "Construcción de edificaciones comerciales e industriales de alta calidad.",
+      "icon": "building",
+      "image": "https://www.constructorasantarosalia.com/images/servicios/servicio-edificacion.jpg"
+    }
+  ]
+}

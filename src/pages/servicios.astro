@@ -1,0 +1,265 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import PageHero from '../components/PageHero.astro';
+import Cta from '../components/Cta.astro';
+import Footer from '../components/Footer.astro';
+
+const services = [
+  {
+    title: 'Distribuidores Viales',
+    description: 'Diseño y construcción de complejos sistemas viales que optimizan el flujo de tráfico urbano. Nuestros distribuidores viales incluyen pasos a desnivel, intersecciones, y soluciones de ingeniería avanzada para mejorar la movilidad urbana.',
+    features: ['Análisis de flujo vehicular', 'Diseño estructural avanzado', 'Señalización integral', 'Iluminación LED'],
+    image: 'https://www.constructorasantarosalia.com/images/galeria/distribuidores%20viales/G_AccesoNorte.jpg'
+  },
+  {
+    title: 'Carreteras',
+    description: 'Construcción de carreteras con los más altos estándares de calidad, durabilidad y seguridad vial. Utilizamos materiales de primera calidad y técnicas de construcción innovadoras para garantizar infraestructura que perdure.',
+    features: ['Pavimentación asfáltica', 'Terracerías', 'Drenaje pluvial', 'Señalización vial'],
+    image: 'https://www.constructorasantarosalia.com/images/galeria/carreteras/G_CasasGrandesJuarez.jpg'
+  },
+  {
+    title: 'Puentes',
+    description: 'Ingeniería y construcción de puentes vehiculares y estructuras de conexión con tecnología de vanguardia. Desde puentes peatonales hasta grandes estructuras vehiculares, garantizamos seguridad y durabilidad.',
+    features: ['Puentes vehiculares', 'Puentes peatonales', 'Estructuras de acero', 'Concreto presforzado'],
+    image: 'https://www.constructorasantarosalia.com/images/galeria/puentes/G_LaJunta.jpg'
+  },
+  {
+    title: 'Pasos Superiores',
+    description: 'Construcción de pasos a desnivel superiores para mejorar la movilidad y conectividad urbana. Nuestros pasos superiores están diseñados para manejar altos volúmenes de tráfico con máxima seguridad.',
+    features: ['Diseño sísmico', 'Acabados de alta calidad', 'Integración urbana', 'Mantenimiento preventivo'],
+    image: 'https://www.constructorasantarosalia.com/images/galeria/pasos_superiores/G_OrtizMena.jpg'
+  },
+  {
+    title: 'Pasos Inferiores',
+    description: 'Construcción de pasos inferiores y túneles vehiculares que permiten un flujo continuo de tráfico, eliminando cruces a nivel y mejorando la seguridad vial.',
+    features: ['Excavación especializada', 'Sistemas de drenaje', 'Iluminación eficiente', 'Ventilación mecánica'],
+    image: 'https://www.constructorasantarosalia.com/images/galeria/pasos_inferiores/G_JuanEscutia.jpg'
+  },
+  {
+    title: 'Vialidades Urbanas',
+    description: 'Desarrollo integral de vialidades urbanas con infraestructura moderna y funcional. Incluimos todos los elementos necesarios para vías seguras y eficientes.',
+    features: ['Pavimentación', 'Banquetas y guarniciones', 'Alumbrado público', 'Áreas verdes'],
+    image: 'https://www.constructorasantarosalia.com/images/galeria/vialidades_urbanas/G_MiguelDeLaMadrid.jpg'
+  },
+  {
+    title: 'Edificaciones',
+    description: 'Construcción de edificaciones comerciales e industriales cumpliendo los más altos estándares de calidad y seguridad. Desde naves industriales hasta centros comerciales.',
+    features: ['Naves industriales', 'Centros comerciales', 'Edificios corporativos', 'Instalaciones especiales'],
+    image: 'https://www.constructorasantarosalia.com/images/galeria/edificaciones/G_Cenaltec.jpg'
+  },
+  {
+    title: 'Urbanizaciones',
+    description: 'Desarrollo de proyectos de urbanización completos, desde la planeación hasta la entrega final. Creamos comunidades bien planificadas con toda la infraestructura necesaria.',
+    features: ['Lotificación', 'Redes de agua potable', 'Alcantarillado', 'Electrificación'],
+    image: 'https://www.constructorasantarosalia.com/images/galeria/urbanizacion/G_MisionDelValle.jpg'
+  },
+  {
+    title: 'Canalizaciones',
+    description: 'Construcción de sistemas de canalización para control de aguas pluviales y residuales. Protegemos comunidades contra inundaciones con infraestructura hidráulica de calidad.',
+    features: ['Canales de concreto', 'Box culverts', 'Presas de gaviones', 'Control de erosión'],
+    image: 'https://www.constructorasantarosalia.com/images/galeria/canalizaciones/G_Cantera.jpg'
+  }
+];
+---
+
+<Layout title="Servicios | Constructora Santa Rosalía">
+  <Header />
+
+  <main>
+    <PageHero
+      title="Nuestros Servicios"
+      breadcrumb="Servicios"
+      image="https://www.constructorasantarosalia.com/images/galeria/distribuidores%20viales/G_Eje60yEje0.jpg"
+    />
+
+    <!-- Services Intro -->
+    <section class="services-intro section">
+      <div class="container">
+        <div class="section-header" data-animate="fade-in-up">
+          <span class="section-label">Lo Que Hacemos</span>
+          <h2 class="section-title">Soluciones Integrales en Construcción</h2>
+          <div class="gold-line"></div>
+          <p class="section-description">
+            Ofrecemos una amplia gama de servicios de construcción e infraestructura,
+            respaldados por más de 30 años de experiencia y un equipo altamente capacitado.
+            Cada proyecto es único y recibe nuestra atención personalizada.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services List -->
+    <section class="services-list">
+      <div class="container">
+        {services.map((service, index) => (
+          <article
+            class={`service-item ${index % 2 === 0 ? '' : 'reverse'}`}
+            data-animate="fade-in-up"
+          >
+            <div class="service-image">
+              <img src={service.image} alt={service.title} loading="lazy" />
+              <div class="service-number">
+                {String(index + 1).padStart(2, '0')}
+              </div>
+            </div>
+            <div class="service-content">
+              <h3 class="service-title">{service.title}</h3>
+              <p class="service-description">{service.description}</p>
+              <ul class="service-features">
+                {service.features.map(feature => (
+                  <li>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <a href="/contacto" class="btn btn-dark">Solicitar Cotización</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <Cta
+      title="¿Necesita un servicio especializado?"
+      description="Contáctenos para discutir su proyecto y recibir una cotización personalizada."
+    />
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .services-intro {
+    background: var(--white);
+    padding-bottom: 2rem;
+  }
+
+  .services-list {
+    background: var(--white);
+    padding-bottom: var(--section-padding);
+  }
+
+  .service-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 6rem;
+  }
+
+  .service-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .service-item.reverse {
+    direction: rtl;
+  }
+
+  .service-item.reverse > * {
+    direction: ltr;
+  }
+
+  .service-image {
+    position: relative;
+  }
+
+  .service-image img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    box-shadow: var(--shadow-xl);
+  }
+
+  .service-number {
+    position: absolute;
+    top: -1.5rem;
+    left: -1.5rem;
+    font-family: var(--font-display);
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--gold-500);
+    opacity: 0.3;
+    line-height: 1;
+  }
+
+  .service-item.reverse .service-number {
+    left: auto;
+    right: -1.5rem;
+  }
+
+  .service-content {
+    padding: 2rem 0;
+  }
+
+  .service-title {
+    font-size: 2rem;
+    color: var(--primary-900);
+    margin-bottom: 1.25rem;
+  }
+
+  .service-description {
+    font-size: 1rem;
+    color: var(--gray-500);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+
+  .service-features {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .service-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9375rem;
+    color: var(--gray-700);
+  }
+
+  .service-features svg {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    color: var(--gold-500);
+  }
+
+  @media (max-width: 1024px) {
+    .service-item {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .service-item.reverse {
+      direction: ltr;
+    }
+
+    .service-number {
+      font-size: 4rem;
+      top: -1rem;
+      left: -0.5rem;
+    }
+
+    .service-item.reverse .service-number {
+      left: -0.5rem;
+      right: auto;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .service-image img {
+      height: 300px;
+    }
+
+    .service-features {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

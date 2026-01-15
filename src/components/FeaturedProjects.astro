@@ -1,0 +1,248 @@
+---
+const projects = [
+  {
+    id: 1,
+    title: 'Distribuidor Vial Acceso Norte',
+    category: 'Distribuidores Viales',
+    location: 'Chihuahua',
+    image: 'https://www.constructorasantarosalia.com/images/galeria/distribuidores%20viales/G_AccesoNorte.jpg'
+  },
+  {
+    id: 2,
+    title: 'Puente Ortiz Mena',
+    category: 'Pasos Superiores',
+    location: 'Chihuahua',
+    image: 'https://www.constructorasantarosalia.com/images/galeria/pasos_superiores/G_OrtizMena.jpg'
+  },
+  {
+    id: 3,
+    title: 'Carretera Casas Grandes',
+    category: 'Carreteras',
+    location: 'Chihuahua',
+    image: 'https://www.constructorasantarosalia.com/images/galeria/carreteras/G_CasasGrandesJuarez.jpg'
+  },
+  {
+    id: 4,
+    title: 'Puente La Junta',
+    category: 'Puentes',
+    location: 'Chihuahua',
+    image: 'https://www.constructorasantarosalia.com/images/galeria/puentes/G_LaJunta.jpg'
+  },
+  {
+    id: 5,
+    title: 'Cenaltec',
+    category: 'Edificaciones',
+    location: 'Chihuahua',
+    image: 'https://www.constructorasantarosalia.com/images/galeria/edificaciones/G_Cenaltec.jpg'
+  },
+  {
+    id: 6,
+    title: 'Vialidad Miguel de la Madrid',
+    category: 'Vialidades Urbanas',
+    location: 'Chihuahua',
+    image: 'https://www.constructorasantarosalia.com/images/galeria/vialidades_urbanas/G_MiguelDeLaMadrid.jpg'
+  }
+];
+---
+
+<section class="featured-projects section">
+  <div class="container">
+    <div class="section-header" data-animate="fade-in-up">
+      <span class="section-label">Portafolio</span>
+      <h2 class="section-title">Proyectos Destacados</h2>
+      <div class="gold-line"></div>
+      <p class="section-description">
+        Descubre algunos de nuestros proyectos más emblemáticos que demuestran
+        nuestra experiencia y compromiso con la excelencia.
+      </p>
+    </div>
+
+    <div class="projects-grid">
+      {projects.map((project, index) => (
+        <article
+          class={`project-card ${index === 0 ? 'project-large' : ''}`}
+          data-animate="fade-in-up"
+          style={`animation-delay: ${index * 100}ms`}
+        >
+          <div class="project-image">
+            <img src={project.image} alt={project.title} loading="lazy" />
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-content">
+            <span class="project-category">{project.category}</span>
+            <h3 class="project-title">{project.title}</h3>
+            <span class="project-location">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              {project.location}
+            </span>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <div class="projects-cta" data-animate="fade-in-up">
+      <a href="/experiencia" class="btn btn-primary">Ver Todos los Proyectos</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .featured-projects {
+    background: var(--white);
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .project-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .project-large {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+
+  .project-image {
+    position: absolute;
+    inset: 0;
+  }
+
+  .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+  }
+
+  .project-card:hover .project-image img {
+    transform: scale(1.1);
+  }
+
+  .project-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(10, 22, 40, 0.9) 0%,
+      rgba(10, 22, 40, 0.4) 50%,
+      transparent 100%
+    );
+    transition: background var(--transition-base);
+  }
+
+  .project-card:hover .project-overlay {
+    background: linear-gradient(
+      to top,
+      rgba(10, 22, 40, 0.95) 0%,
+      rgba(10, 22, 40, 0.6) 50%,
+      rgba(10, 22, 40, 0.3) 100%
+    );
+  }
+
+  .project-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    color: var(--white);
+    transform: translateY(20px);
+    transition: transform var(--transition-base);
+  }
+
+  .project-card:hover .project-content {
+    transform: translateY(0);
+  }
+
+  .project-category {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gold-400);
+    margin-bottom: 0.5rem;
+  }
+
+  .project-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+  }
+
+  .project-large .project-title {
+    font-size: 1.5rem;
+  }
+
+  .project-location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+  }
+
+  .project-card:hover .project-location {
+    opacity: 1;
+  }
+
+  .project-location svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .projects-cta {
+    text-align: center;
+  }
+
+  @media (max-width: 1024px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 280px);
+    }
+
+    .project-large {
+      grid-column: span 2;
+      grid-row: span 1;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .projects-grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+
+    .project-card {
+      height: 280px;
+    }
+
+    .project-large {
+      grid-column: span 1;
+      height: 350px;
+    }
+
+    .project-content {
+      transform: translateY(0);
+    }
+
+    .project-location {
+      opacity: 1;
+    }
+  }
+</style>

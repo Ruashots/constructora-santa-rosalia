@@ -1,0 +1,111 @@
+---
+interface Props {
+  title: string;
+  breadcrumb: string;
+  image?: string;
+}
+
+const {
+  title,
+  breadcrumb,
+  image = 'https://www.constructorasantarosalia.com/images/about/bg3.jpg'
+} = Astro.props;
+---
+
+<section class="page-hero">
+  <div class="page-hero-bg">
+    <img src={image} alt="" />
+    <div class="page-hero-overlay"></div>
+  </div>
+
+  <div class="container">
+    <div class="page-hero-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Inicio</a>
+        <span class="separator">/</span>
+        <span class="current">{breadcrumb}</span>
+      </nav>
+      <h1 class="page-hero-title">{title}</h1>
+    </div>
+  </div>
+</section>
+
+<style>
+  .page-hero {
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+  }
+
+  .page-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .page-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .page-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(10, 22, 40, 0.9) 0%,
+      rgba(10, 22, 40, 0.75) 100%
+    );
+  }
+
+  .page-hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 3rem 0;
+  }
+
+  .breadcrumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+  }
+
+  .breadcrumb a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+  }
+
+  .breadcrumb a:hover {
+    color: var(--gold-400);
+  }
+
+  .separator {
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .current {
+    color: var(--gold-400);
+    font-weight: 500;
+  }
+
+  .page-hero-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: var(--white);
+    margin: 0;
+  }
+
+  @media (max-width: 640px) {
+    .page-hero {
+      min-height: 350px;
+    }
+  }
+</style>
